@@ -37,7 +37,4 @@ build/
 ### Mac OS ###
 .DS_Store
 
-**/src/main/**/Database.java
-**/src/main/**/models/
-**/src/main/**/StudentDao.java
 **/resources/**/*.fxml
