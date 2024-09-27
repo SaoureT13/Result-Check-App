@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1220.0" style="-fx-background-color: #F7F9F8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.studentrevealexam.HomeController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="927.0" style="-fx-background-color: #FFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="31.0" prefWidth="965.0">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/logo-pg.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="31.0" prefWidth="694.0" />
+                  <Region prefHeight="31.0" prefWidth="20.0" />
+                  <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="120.0" style="-fx-background-color: #FECA00; -fx-background-radius: 10px;" text="Contactez-nous" textAlignment="CENTER">
+                     <font>
+                        <Font name="Montserrat SemiBold" size="9.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="2.0" top="2.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="submitBox" alignment="TOP_CENTER" layoutX="297.0" layoutY="105.0" prefHeight="175.0" prefWidth="371.0" style="-fx-background-color: #FFF; -fx-background-radius: 10px;" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css" AnchorPane.bottomAnchor="264.0" AnchorPane.leftAnchor="297.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="105.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="273.0" prefWidth="664.0">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="24.0" prefWidth="550.0" style="-fx-border-width: 0 0 .2px 0; -fx-border-color: #000;" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css">
+                     <children>
+                        <Label text="Resultat Examen Terminal s-1 2023/2024" textAlignment="CENTER">
+                           <font>
+                              <Font name="Montserrat Medium" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="errorBox" alignment="CENTER" managed="false" maxHeight="66.0" maxWidth="664.0" minHeight="66.0" minWidth="664.0" prefHeight="66.0" prefWidth="664.0" visible="false">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="170.0" style="-fx-background-color: #FF4242; -fx-background-radius: 10px;" text="Le matricule entrée ne correspond à aucun étudiant" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Montserrat Black" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Region prefHeight="17.0" prefWidth="664.0" />
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="30.0" prefWidth="462.0" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="323.0" text="Veuillez entrer votre matricule(0073032) afin d'obtenir votre resultat" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Montserrat Medium" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="48.0" prefWidth="358.0" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css">
+                     <children>
+                        <TextField fx:id="matEtudTextField" maxHeight="-Infinity" prefHeight="30.0" prefWidth="232.0" promptText="ex:0073032">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: #1C4381; -fx-background-radius: 10px;" text="Soumettre" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Black" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fx:id="resultBox" alignment="TOP_CENTER" layoutX="296.0" layoutY="105.0" managed="false" prefHeight="271.0" prefWidth="664.0" style="-fx-background-color: #FFF;" translateX="1000.0" visible="false">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="273.0" prefWidth="664.0">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="24.0" prefWidth="550.0" style="-fx-border-width: 0 0 .2px 0; -fx-border-color: #000;" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css">
+                     <children>
+                        <Label text="Resultat Examen Terminal s-1 2023/2024" textAlignment="CENTER">
+                           <font>
+                              <Font name="Montserrat Medium" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Region prefHeight="33.0" prefWidth="664.0" />
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="70.0" prefWidth="462.0" stylesheets="@../../../../../../../../../../eclipse-workspace/saoured11/src/main/resources/styling.css">
+                     <children>
+                        <ImageView fitHeight="93.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/success-2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Region prefHeight="15.0" prefWidth="664.0" />
+                  <Label fx:id="infoText1" text="Félicitation Mr Saouré Kouamé" textFill="#3bda15">
+                     <font>
+                        <Font name="Montserrat Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="19.0" prefWidth="664.0" />
+                  <Button fx:id="detailsButton1" mnemonicParsing="false" prefHeight="24.0" prefWidth="95.0" style="-fx-background-color: #1C4381;" text="Details" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Black" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="442.0" prefHeight="134.0" prefWidth="1220.0" style="-fx-background-color: #1C4381;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
