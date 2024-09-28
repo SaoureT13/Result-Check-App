@@ -16,6 +16,8 @@ public class HomeApplication extends Application {
         stage.setTitle("Exam reveal");
         stage.setMinWidth(1220);
         stage.setMinHeight(640);
+        stage.setMaxWidth(1220);
+        stage.setMaxHeight(640);
         stage.setScene(scene);
         stage.show();
     }
