@@ -19,9 +19,9 @@ public class Database {
 //    private static final String DB_PASSWORD = "S@oured_13";
 
 
-    private Database() {
-
-    }
+//    private Database() {
+//
+//    }
 
     public static Connection getDBConnexion() throws SQLException {
         Connection connection = null;
@@ -40,5 +40,8 @@ public class Database {
         }
 
         return connection;
+    }
+
+    public static void setConnection(Connection connectionMock) {
     }
 }

@@ -254,7 +254,7 @@
                   </VBox>
                   <HBox alignment="CENTER" prefHeight="47.0" prefWidth="646.0">
                      <children>
-                        <MFXButton fx:id="restartButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#restart" prefHeight="26.0" prefWidth="112.0" rippleAnimateShadow="true" style="-fx-background-radius: 10px; -fx-background-color: #FECA00;" text="Recommencer" textAlignment="CENTER">
+                        <MFXButton fx:id="restartButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#restart" prefHeight="26.0" prefWidth="137.0" rippleAnimateShadow="true" style="-fx-background-radius: 10px; -fx-background-color: #FECA00;" text="Recommencer" textAlignment="CENTER">
                            <font>
                               <Font name="Montserrat SemiBold" size="13.0" />
                            </font>

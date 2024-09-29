@@ -6,6 +6,7 @@ module org.example.studentrevealexam {
     requires java.sql;
     requires mysql.connector.j;
     requires MaterialFX;
+    requires javafx.swing;
 
     opens org.example.studentrevealexam to javafx.fxml;
     exports org.example.studentrevealexam;

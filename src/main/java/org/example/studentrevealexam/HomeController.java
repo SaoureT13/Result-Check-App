@@ -27,8 +27,8 @@ import java.util.logging.Logger;
 
 public class HomeController {
     private static final Logger logger = Logger.getLogger(HomeController.class.getName());
-    private final StudentDao studentDao = new StudentDao();
-    private final ExamDao examDao = new ExamDao();
+    StudentDao studentDao = new StudentDao();
+    ExamDao examDao = new ExamDao();
     Student student;
     double noteTotal;
     int examCount;
@@ -89,7 +89,7 @@ public class HomeController {
     private Label welcomeText;
 
     @FXML
-    private TextField matEtudTextField;
+    TextField matEtudTextField;
 
     @FXML
     public HBox errorBox;
@@ -108,7 +108,7 @@ public class HomeController {
     }
 
     @FXML
-    protected void onHelloButtonClick() throws SQLException {
+    protected void onHelloButtonClick() {
         String mat = matEtudTextField.getText().trim();
 
         //Rendre invisible
@@ -190,7 +190,7 @@ public class HomeController {
     }
 
     @FXML
-    protected void onRevealDetails() throws SQLException {
+    protected void onRevealDetails(){
         animation(resultBox, -1000, 2000, event -> {
             resultBox.setManaged(false);
             resultBox.setVisible(false);
@@ -211,12 +211,15 @@ public class HomeController {
             @Override
             public Void call() throws Exception {
 
+                //Initialiser un hashmap pour accueillir des objets {matière : note}
                 HashMap<String, Integer> studentNotesDetails = new HashMap<>();
                 Exams exams = examDao.retrieveAllExam();
 
+                //Transformer le hashmap en un list pour pouvoir accepter au objet grâce à leur index
                 List<Map.Entry<String, Integer>> entryList = new ArrayList<>(student.getNotes().entrySet());
 
                 int i = 0;
+                //Lier les notes de l'étudiant aux examens correspondant
                 for (String exam : exams.getExamList()) {
                     Map.Entry<String, Integer> entry = null;
 
@@ -225,7 +228,6 @@ public class HomeController {
                             entry = objet;
                         }
                     }
-
                     if (entry != null) {
                         studentNotesDetails.put(exam, entry.getValue());
                     } else {
