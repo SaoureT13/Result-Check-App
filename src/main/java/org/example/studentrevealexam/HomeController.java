@@ -155,7 +155,7 @@ public class HomeController {
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setTitle("Erreur");
                         alert.setHeaderText(null);
-                        alert.setContentText("Le matricule entré ne correspond à aucun étudiant " + mat);
+                        alert.setContentText("Le matricule entré ne correspond à aucun étudiant ");
                         alert.showAndWait();
                     }
                 });
@@ -203,7 +203,7 @@ public class HomeController {
 
         fullname.setText("Nom et prénoms: " + student.getStr_nom_etud() + " " + student.getStr_prenoms_etud());
         birthday.setText("Date de naissance: " + student.getDt_date_naissance_etud());
-        school.setText("Ecole : " + student.getStr_ecole_etud());
+        school.setText("École : " + student.getStr_ecole_etud());
         totalPoint.setText("Total point : " + noteTotal + "/" + (examCount * 20));
         moyenne.setText("Moyenne : " + (noteTotal / examCount));
 
